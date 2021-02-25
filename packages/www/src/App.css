@@ -1,0 +1,17 @@
+.App {
+  background-color: rgb(40, 44, 52);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.App-panel {
+  border-radius: 25px;
+  background-color: #f7f7f7;
+  height: 100%;
+  min-width: 40vw;
+  font-size: calc(10px + 2vmin);
+  color: rgb(40, 44, 52);
+}

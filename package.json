@@ -1,0 +1,17 @@
+{
+  "name": "store-my-text",
+  "version": "1.0.0",
+  "description": "Store a provided text in Filecoin miners",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vasco-santos/store-my-text.git"
+  },
+  "private": true,
+  "scripts": {
+    "postinstall": "lerna bootstrap",
+    "reset": "lerna run clean && rimraf packages/*/node_modules node_modules"
+  },
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  }
+}
