@@ -19,7 +19,7 @@ class TextForm extends React.Component {
     this.handleEmailChange = this.handleEmailChange.bind(this);
   }
 
-  handleSubmit(event) {
+  handleSubmit (event) {
     event.preventDefault();
 
     this.setState({
@@ -48,7 +48,7 @@ class TextForm extends React.Component {
     this.setState({ email: event.target.value });
   }
 
-  render() {
+  render () {
     const formClass = classNames({
       form: true,
       'form-hidden': this.state.submitting

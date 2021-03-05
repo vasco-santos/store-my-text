@@ -8,14 +8,6 @@
   opacity: 0.1;
 }
 
-.form-text {
-  width: 100%;
-  margin: 0 0 10px 0;
-  border: 1px solid rgb(40, 44, 52);
-  padding: 0;
-  resize: none;
-}
-
 .form-input {
   width: 100%;
   margin: 0 0 10px 0;
