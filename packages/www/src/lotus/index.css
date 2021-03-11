@@ -22,3 +22,23 @@
   height: 30px;
   cursor: pointer;
 }
+
+table {
+  font-size: 12px;
+}
+
+table#dealList .StorageDealError td, table#dealList .StorageDealExpired td {
+  color: red;
+}
+
+table#dealList .StorageDealActive td {
+  color: green;
+}
+
+table#dealList td {
+  white-space: nowrap;
+}
+
+table#dealList td.message {
+  white-space: normal;
+}
