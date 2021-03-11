@@ -8,14 +8,6 @@
   opacity: 0.1;
 }
 
-.form-text {
-  width: 100%;
-  margin: 0 0 10px 0;
-  border: 1px solid rgb(40, 44, 52);
-  padding: 0;
-  resize: none;
-}
-
 .form-input {
   width: 100%;
   margin: 0 0 10px 0;
@@ -29,4 +21,24 @@
   width: 100%;
   height: 30px;
   cursor: pointer;
+}
+
+table {
+  font-size: 12px;
+}
+
+table#dealList .StorageDealError td, table#dealList .StorageDealExpired td {
+  color: red;
+}
+
+table#dealList .StorageDealActive td {
+  color: green;
+}
+
+table#dealList td {
+  white-space: nowrap;
+}
+
+table#dealList td.message {
+  white-space: normal;
 }
