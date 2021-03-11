@@ -16,7 +16,17 @@ fastify.register(require('fastify-cors'), {
   origin: '*' // TODO change
 })
 
-fastify.post('/lotus', async (request, reply) => {
+fastify.post('/list-imports', async (request, reply) => {
+  const provider = new NodejsProvider(endpointUrl, { token: request.body.token })
+  const client = new LotusRPC(provider, { schema: mainnet.fullNode })
+
+  const imports = await client.clientListImports()
+
+  reply.type('application/json').code(200)
+  return imports
+})
+
+fastify.post('/list-deals', async (request, reply) => {
   const provider = new NodejsProvider(endpointUrl, { token: request.body.token })
   const client = new LotusRPC(provider, { schema: mainnet.fullNode })
 
@@ -24,6 +34,20 @@ fastify.post('/lotus', async (request, reply) => {
 
   reply.type('application/json').code(200)
   return deals
+})
+
+fastify.post('/list-miners', async (request, reply) => {
+  const provider = new NodejsProvider(endpointUrl, { token: request.body.token })
+  const client = new LotusRPC(provider, { schema: mainnet.fullNode })
+
+  console.log('list miners 1')
+  const head = await client.chainHead()
+  console.log('list miners 2')
+  const miners = await client.stateListMiners(head.Cids)
+  console.log('list miners 3', miners)
+
+  reply.type('application/json').code(200)
+  return miners
 })
 
 fastify.post('/', async (request, reply) => {
