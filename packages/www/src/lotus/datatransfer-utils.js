@@ -1,0 +1,19 @@
+export const DataTransferStatuses = [
+  'Requested',
+  'Ongoing',
+  'TransferFinished',
+  'ResponderCompleted',
+  'Finalizing',
+  'Completing',
+  'Completed',
+  'Failing',
+  'Failed',
+  'Cancelling',
+  'Cancelled',
+  'InitiatorPaused',
+  'ResponderPaused',
+  'BothPaused',
+  'ResponderFinalizing',
+  'ResponderFinalizingTransferFinished',
+  'ChannelNotFoundError'
+]

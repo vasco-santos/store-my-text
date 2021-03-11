@@ -27,7 +27,10 @@ class TextForm extends React.Component {
     });
 
     // TODO: proper config for server addr
-    postData('http://127.0.0.1:8001/', {
+    const serverUrl = new URL(document.location)
+    serverUrl.port = 8001
+    serverUrl.pathname = '/'
+    postData(serverUrl.toString(), {
       text: this.state.text,
       email: this.state.email
     }).then((data) => {
